@@ -32,7 +32,6 @@
               };
               packages = [
                 pkgs.nixpkgs-fmt
-                pkgs.docker
                 pkgs.gnumake
               ];
             }
@@ -40,8 +39,6 @@
               pre-commit.hooks.gofmt.enable = true;
               packages = [
                 pkgs.go
-                pkgs.gotools
-                pkgs.mockgen
                 pkgs.protobuf
                 pkgs.protoc-gen-go
                 pkgs.protoc-gen-go-grpc
