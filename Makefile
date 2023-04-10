@@ -7,9 +7,9 @@ all: $(GEN_ELKIA_APIS)
 
 .PHONY: gen-elkia-api-erlang
 gen-elkia-api-erlang:
-	@cp elkia-api/fleet/v1alpha1/fleet.proto elkia-api-erlang/protos
-	@cp elkia-api/eventing/v1alpha1/eventing.proto elkia-api-erlang/protos
-	@cp elkia-api/world/v1alpha1/world.proto elkia-api-erlang/protos
+	@cp elkia-api/fleet/v1alpha1/fleet.proto elkia-api-erlang/protos/v1alpha1_fleet.proto
+	@cp elkia-api/eventing/v1alpha1/eventing.proto elkia-api-erlang/protos/v1alpha1_eventing.proto
+	@cp elkia-api/world/v1alpha1/world.proto elkia-api-erlang/protos/v1alpha1_world.proto
 	@cp LICENSE elkia-api-erlang
 	@cd elkia-api-erlang && rebar3 compile
 	@cd elkia-api-erlang && rebar3 grpc gen
