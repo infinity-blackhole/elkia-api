@@ -47,6 +47,12 @@
                 pkgs.protoc-gen-go-grpc
               ];
             }
+            {
+              packages = [
+                pkgs.erlang
+                pkgs.rebar3
+              ];
+            }
           ];
         };
       }
